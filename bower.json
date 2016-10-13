@@ -1,0 +1,22 @@
+{
+  "name": "Pets-World",
+  "description": "",
+  "main": "",
+  "authors": [
+    "james <luongr3@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/luongs3/Pets-World",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
