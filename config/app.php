@@ -167,6 +167,8 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+
         /*
          * Package Service Providers...
          */

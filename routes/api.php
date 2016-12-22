@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('/wam', function (Request $request) {
+    return json_encode('aaa');
+    return view('test');
+})->middleware(['auth:api', 'scopes:collaborative-doctor']);
+
+
+Route::resource('pets', 'Api\PetsController');

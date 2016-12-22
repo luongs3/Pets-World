@@ -1,0 +1,1 @@
+Resource is only seen by authenticated user with proper granted token.

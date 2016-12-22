@@ -11,9 +11,7 @@ class CreateUsersTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->softDeletes();
-			$table->tinyInteger('type')->default('1');
-			$table->integer('social_id')->nullable();
-			$table->string('email', 100);
+			$table->string('email', 100)->nullable();
 			$table->string('name', 100);
 			$table->string('avatar', 200)->nullable();
 			$table->string('password', 60);

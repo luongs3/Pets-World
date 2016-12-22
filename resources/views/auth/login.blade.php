@@ -5,7 +5,24 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading">
+                    <span>{{ trans('label.login') }}</span>
+                    <a class="btn btn-primary social-login-button" href="{{ url('auth/github') }}">
+                        <i class="fa fa-github fa-fw"></i>
+                        {{ trans('label.github') }}
+                    </a>
+                    <a class="btn btn-primary social-login-button" href="{{ url('auth/google') }}">
+                        <i class="fa fa-google fa-fw"></i>
+                        {{ trans('label.google_plus') }}
+                    </a>
+                    <a class="btn btn-primary social-login-button" href="{{ url('auth/facebook') }}">
+                        <i class="fa fa-facebook fa-fw"></i>
+                        {{ trans('label.facebook') }}
+                    </a>
+                    <passport-clients>aa</passport-clients>
+                    <passport-authorized-clients>bb</passport-authorized-clients>
+                    <passport-personal-access-tokens>cc</passport-personal-access-tokens>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
@@ -51,7 +68,7 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    {{ trans('label.login') }}
                                 </button>
 
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
