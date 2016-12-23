@@ -11,6 +11,7 @@ class OAuthTestController extends Controller
 {
     public function generateAccessToken($resourceId)
     {
+        setcookie($resourceId);
         $accessToken = $this->getAccessToken($resourceId);
 
         if (is_null($accessToken)) {
@@ -40,7 +41,7 @@ class OAuthTestController extends Controller
 
     public static function getAccessToken($resourceId)
     {
-        if (isset($resourceId)) {
+        if (isset($resourceId) && isset($_COOKIE[$resourceId])) {
             return $_COOKIE[$resourceId];
         }
     }

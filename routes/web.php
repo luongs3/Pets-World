@@ -52,6 +52,7 @@ Route::group(['prefix' => 'auth'], function() {
 });
 
 Route::resource('pets', 'PetsController', ['middleware' => 'auth']);
+Route::resource('/api/pets', 'Api\PetsController');
 
 Route::get('email/send', function () {
     $invoice = \App\Models\Invoice::findOrFail(1);
@@ -62,3 +63,4 @@ Route::get('email/send', function () {
 });
 
 Route::get('/oauth2/access-token/{resourceId}', 'OAuthTestController@generateAccessToken');
+Route::get('/test', 'HomeController@test');

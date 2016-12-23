@@ -10,7 +10,7 @@ class PetsController extends Controller
 {
     function __construct()
     {
-        $this->middleware('check-auth');
+        $this->middleware('auth.jwt');
     }
 
     /**

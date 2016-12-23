@@ -23,4 +23,3 @@ Route::get('/wam', function (Request $request) {
 })->middleware(['auth:api', 'scopes:collaborative-doctor']);
 
 
-Route::resource('pets', 'Api\PetsController');
